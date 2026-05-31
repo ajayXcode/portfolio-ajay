@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<title>Ajay Yadav | Full Stack Developer & AI Engineer</title>
+<meta name="description" content="Ajay Yadav — BTech CE student, Full Stack Developer, AI/ML engineer, and hackathon builder. Creator of MedBridge AI-Vision, CricSim-X, and Dynamic Transit."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800;900&family=Geist:wght@400;500&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "text-primary": "#FFFFFF",
+          "tertiary-container": "#00a3c4",
+          "on-surface-variant": "#e0c0b5",
+          "surface-bright": "#3b3937",
+          "secondary": "#b6ef30",
+          "primary": "#ffb59c",
+          "outline": "#a78a81",
+          "border-subtle": "#2A2827",
+          "surface-container-high": "#2c2928",
+          "outline-variant": "#58413a",
+          "tertiary": "#5cd5f8",
+          "on-primary-container": "#581800",
+          "surface-container-lowest": "#100e0d",
+          "background": "#151312",
+          "primary-container": "#f46c38",
+          "surface-container": "#211f1e",
+          "on-primary": "#5c1a00",
+          "on-secondary": "#253500",
+          "surface-container-highest": "#373433",
+          "on-background": "#e7e1df",
+          "secondary-container": "#9cd200",
+          "surface": "#151312",
+          "surface-elevated": "#1C1A19",
+          "inverse-on-surface": "#32302f",
+          "on-secondary-container": "#3e5600",
+          "text-secondary": "#998F8F",
+          "on-surface": "#e7e1df",
+          "surface-dim": "#151312",
+          "surface-variant": "#373433",
+        },
+        borderRadius: {
+          DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"
+        },
+        spacing: {
+          base: "8px", gutter: "24px", "container-max": "1200px",
+          "margin-mobile": "20px", "section-gap": "120px"
+        },
+        fontFamily: {
+          "label-md": ["Geist"],
+          "headline-md": ["Poppins"],
+          "body-md": ["Inter"],
+          "body-lg": ["Inter"],
+          "display-lg-mobile": ["Poppins"],
+          "headline-lg": ["Poppins"],
+          "display-lg": ["Poppins"]
+        },
+        fontSize: {
+          "label-md":        ["14px", {lineHeight:"1.0", letterSpacing:"0.05em", fontWeight:"500"}],
+          "headline-md":     ["24px", {lineHeight:"1.3", fontWeight:"700"}],
+          "body-md":         ["16px", {lineHeight:"1.6", fontWeight:"400"}],
+          "body-lg":         ["18px", {lineHeight:"1.6", fontWeight:"400"}],
+          "display-lg-mobile":["48px",{lineHeight:"1.1", letterSpacing:"-0.04em", fontWeight:"900"}],
+          "headline-lg":     ["40px", {lineHeight:"1.2", letterSpacing:"-0.02em", fontWeight:"800"}],
+          "headline-lg-mobile":["32px",{lineHeight:"1.2", letterSpacing:"-0.02em", fontWeight:"800"}],
+          "display-lg":      ["72px", {lineHeight:"1.1", letterSpacing:"-0.04em", fontWeight:"900"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  body { background-color:#151312; color:#FFFFFF; }
+  ::-webkit-scrollbar { width:8px; }
+  ::-webkit-scrollbar-track { background:#151312; }
+  ::-webkit-scrollbar-thumb { background:#2A2827; border-radius:4px; }
+  ::-webkit-scrollbar-thumb:hover { background:#3b3937; }
+  .ticker-wrap { overflow:hidden; }
+  .ticker-track { display:flex; width:max-content; animation:tickLoop 30s linear infinite; }
+  @keyframes tickLoop { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+  a:active, button:active, .group:active {
+    filter: drop-shadow(0 0 10px rgba(255, 107, 0, 0.5));
+    transition: filter 0.1s;
+  }
+</style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden pb-24 md:pb-0">
+
+<!-- ═══ TOP NAV PILL ═══ -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 fade-up hidden md:block">
+  <div class="bg-surface-elevated/90 backdrop-blur-md border border-border-subtle rounded-2xl px-6 py-3 flex items-center gap-8 shadow-xl">
+    <a href="#home" class="text-text-primary hover:text-primary transition-colors flex items-center justify-center">
+      <span class="material-symbols-outlined text-[22px]">home</span>
+    </a>
+    <a href="#projects" class="text-text-secondary hover:text-primary transition-colors flex items-center justify-center">
+      <span class="material-symbols-outlined text-[22px]">folder_open</span>
+    </a>
+    <a href="#experience" class="text-text-secondary hover:text-primary transition-colors flex items-center justify-center">
+      <span class="material-symbols-outlined text-[22px]">work_history</span>
+    </a>
+    <a href="#tools" class="text-text-secondary hover:text-primary transition-colors flex items-center justify-center">
+      <span class="material-symbols-outlined text-[22px]">build</span>
+    </a>
+    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors flex items-center justify-center">
+      <span class="material-symbols-outlined text-[22px]">edit_note</span>
+    </a>
+  </div>
+</header>
+
+<main class="max-w-[1200px] mx-auto px-margin-mobile pt-24 md:pt-32 pb-32 flex flex-col lg:flex-row gap-12 lg:gap-16">
+
+  <!-- Left Sidebar (Sticky on Desktop) -->
+  <aside class="w-full lg:w-[360px] flex-shrink-0 z-10">
+    <div class="lg:sticky lg:top-28">
+      <!-- ═══ HERO CARD ═══ -->
+      <section id="home" class="relative bg-white text-background rounded-[2.5rem] p-6 overflow-hidden flex flex-col items-center text-center fade-up shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+        
+        <!-- Top left dashed arc -->
+        <svg class="absolute top-0 left-0 w-56 h-56 -translate-y-1/3 -translate-x-1/4 text-[#FF6B00] z-20 pointer-events-none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+        </svg>
+
+        <!-- Image -->
+        <div class="relative w-[85%] aspect-[4/4.5] rounded-[1.5rem] overflow-hidden mb-6 z-10 bg-gray-100 shadow-md">
+          <img alt="Ajay Yadav" class="w-full h-full object-cover object-top" src="ajay.jpeg"/>
+          <div class="absolute inset-0 bg-primary-container/10 mix-blend-overlay pointer-events-none"></div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-[2.2rem] font-display-lg text-background leading-none tracking-tight mb-4 z-10 relative">Ajay Yadav</h1>
+
+        <!-- Flame with dashed line -->
+        <div class="relative w-full h-12 flex justify-center items-center mb-3 z-10">
+          <!-- Curved dashed line from left to center -->
+          <svg class="absolute -left-6 top-1/2 -translate-y-1/2 w-[calc(50%+24px)] h-16 text-[#FF6B00]" viewBox="0 0 100 100" fill="none" preserveAspectRatio="none">
+            <path d="M 0,100 Q 50,100 100,50" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 4"/>
+          </svg>
+          <div class="bg-[#FF6B00] w-[34px] h-[34px] rounded-full flex items-center justify-center shadow-md relative z-10">
+            <span class="material-symbols-outlined text-white text-[18px]" style="font-variation-settings:'FILL' 1;">local_fire_department</span>
+          </div>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="text-[15px] font-semibold text-gray-500 mb-8 max-w-[240px] mx-auto leading-snug z-10 relative">
+          A Software Engineer who has developed countless innovative solutions.
+        </p>
+        
+        <!-- Social Icons -->
+        <div class="flex gap-6 justify-center items-center pb-2 z-10 relative">
+          <a href="mailto:ajayyadav04116@gmail.com" class="text-[#FF6B00] hover:scale-110 transition-transform flex items-center justify-center w-6 h-6" title="Email" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined text-[24px]">mail</span>
+          </a>
+          <a href="https://github.com/ajayXcode" class="text-[#FF6B00] hover:scale-110 transition-transform flex items-center justify-center w-6 h-6" title="GitHub" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ajay-yadav04/" class="text-[#FF6B00] hover:scale-110 transition-transform flex items-center justify-center w-6 h-6" title="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </div>
+      </section>
+    </div>
+  </aside>
+
+  <!-- Right Content (Scrolls) -->
+  <div class="flex-1 space-y-section-gap min-w-0">
+
+    <!-- ═══ BIG TITLE + STATS ═══ -->
+    <section class="py-12 fade-up">
+    <div class="flex flex-col gap-10">
+      <div>
+        <div class="relative mb-8 text-left">
+          <h2 class="text-[3rem] md:text-[6rem] font-display-lg uppercase text-text-primary leading-[0.85] tracking-tighter">SOFTWARE</h2>
+          <div class="text-[3rem] md:text-[6rem] font-display-lg uppercase text-[#2c2928] leading-[0.85] tracking-tighter -mt-1 md:-mt-2">ENGINEER</div>
+        </div>
+        <p class="text-[#998F8F] text-[17px] font-body-md max-w-[420px] leading-relaxed">
+          Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into beautifully crafted products.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-8 md:gap-16 text-left">
+        <div class="flex flex-col gap-3">
+          <span class="text-[3rem] md:text-[4rem] font-display-lg-mobile text-text-primary leading-none tracking-tighter">+2</span>
+          <span class="text-[11px] font-body-md font-bold text-[#998F8F] uppercase tracking-[0.15em] leading-tight">YEARS OF<br>EXPERIENCE</span>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-[3rem] md:text-[4rem] font-display-lg-mobile text-text-primary leading-none tracking-tighter">+10</span>
+          <span class="text-[11px] font-body-md font-bold text-[#998F8F] uppercase tracking-[0.15em] leading-tight">PROJECTS<br>COMPLETED</span>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-[3rem] md:text-[4rem] font-display-lg-mobile text-text-primary leading-none tracking-tighter">+3</span>
+          <span class="text-[11px] font-body-md font-bold text-[#998F8F] uppercase tracking-[0.15em] leading-tight">HACKATHONS<br>BUILT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS CARDS ═══ -->
+  <section class="grid md:grid-cols-2 gap-gutter fade-up">
+    <div class="bg-primary-container text-on-primary-container p-8 rounded-[2rem] min-h-[280px] flex flex-col justify-between group cursor-pointer hover:bg-primary-container/90 active:scale-[0.98] transition-all">
+      <div>
+        <span class="material-symbols-outlined text-4xl">layers</span>
+      </div>
+      <div class="flex justify-between items-end">
+        <h3 class="text-headline-md font-headline-md uppercase max-w-[220px]">AI Agents, ML Pipelines, Web Automation</h3>
+        <div class="w-12 h-12 flex items-center justify-center border border-on-primary-container/30 rounded-lg group-hover:bg-on-primary-container group-hover:text-primary-container transition-all flex-shrink-0 ml-4">
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </div>
+      </div>
+    </div>
+    <div class="bg-secondary text-on-secondary p-8 rounded-[2rem] min-h-[280px] flex flex-col justify-between group cursor-pointer hover:bg-secondary/90 active:scale-[0.98] transition-all">
+      <div>
+        <span class="material-symbols-outlined text-4xl">web</span>
+      </div>
+      <div class="flex justify-between items-end">
+        <h3 class="text-headline-md font-headline-md uppercase max-w-[250px]">React, Next.js, Python, Go, TypeScript</h3>
+        <div class="w-12 h-12 flex items-center justify-center border border-on-secondary/30 rounded-lg group-hover:bg-on-secondary group-hover:text-secondary transition-all flex-shrink-0 ml-4">
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ═══ RECENT PROJECTS ═══ -->
+  <section id="projects">
+    <div class="relative mb-16 text-left">
+      <h2 class="text-[2.5rem] md:text-[5.5rem] font-display-lg uppercase text-text-primary leading-none relative z-10 tracking-tight">RECENT</h2>
+      <div class="text-[3rem] md:text-[6.5rem] font-display-lg uppercase text-surface-variant opacity-30 leading-none -mt-4 md:-mt-6 relative z-0 tracking-tight">PROJECTS</div>
+    </div>
+    <div class="space-y-4">
+
+      <!-- MedBridge -->
+      <a href="https://medbridge-ai-vision.vercel.app/" target="_blank" rel="noopener"
+         class="flex items-center gap-6 p-4 rounded-2xl hover:bg-surface-elevated transition-colors border border-transparent hover:border-border-subtle group cursor-pointer fade-up">
+        <div class="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-surface-container-highest flex-shrink-0">
+          <img class="w-full h-full object-cover" src="medbridge.png" alt="MedBridge AI-Vision"/>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-headline-md font-headline-md truncate">MedBridge AI‑Vision</h3>
+          <p class="text-text-secondary text-label-md font-label-md">AI Medical Diagnostics · Gemini 2.0 · Supabase · React</p>
+          <div class="flex gap-2 mt-2 flex-wrap">
+            <span class="bg-primary-container/20 text-primary-container px-2 py-0.5 rounded text-xs font-label-md">AI / Vision</span>
+            <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded text-xs font-label-md">Healthcare</span>
+            <span class="bg-surface-container text-text-secondary px-2 py-0.5 rounded text-xs font-label-md">Hackathon</span>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors flex-shrink-0">arrow_outward</span>
+      </a>
+
+      <!-- CricSim-X -->
+      <div class="flex items-center gap-6 p-4 rounded-2xl hover:bg-surface-elevated transition-colors border border-transparent hover:border-border-subtle group cursor-pointer fade-up">
+        <div class="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-surface-container-highest flex-shrink-0">
+          <img class="w-full h-full object-cover" src="cricsim.png" alt="CricSim-X"/>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-headline-md font-headline-md truncate">CricSim‑X 🏏</h3>
+          <p class="text-text-secondary text-label-md font-label-md">IPL Analytics Engine · Monte Carlo · XGBoost · Python</p>
+          <div class="flex gap-2 mt-2 flex-wrap">
+            <span class="bg-primary-container/20 text-primary-container px-2 py-0.5 rounded text-xs font-label-md">Machine Learning</span>
+            <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded text-xs font-label-md">Sports Analytics</span>
+            <span class="bg-surface-container text-text-secondary px-2 py-0.5 rounded text-xs font-label-md">Hackathon</span>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors flex-shrink-0">arrow_outward</span>
+      </div>
+
+      <!-- MDT -->
+      <div class="flex items-center gap-6 p-4 rounded-2xl hover:bg-surface-elevated transition-colors border border-transparent hover:border-border-subtle group cursor-pointer fade-up">
+        <div class="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-surface-container-highest flex-shrink-0">
+          <img class="w-full h-full object-cover" src="mdt.png" alt="Dynamic Transit MDT"/>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-headline-md font-headline-md truncate">Dynamic Transit (MDT)</h3>
+          <p class="text-text-secondary text-label-md font-label-md">Real-time Transit Intelligence · Socket.io · React · pnpm</p>
+          <div class="flex gap-2 mt-2 flex-wrap">
+            <span class="bg-primary-container/20 text-primary-container px-2 py-0.5 rounded text-xs font-label-md">Transit Tech</span>
+            <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded text-xs font-label-md">Real-time</span>
+            <span class="bg-surface-container text-text-secondary px-2 py-0.5 rounded text-xs font-label-md">Hackathon</span>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors flex-shrink-0">arrow_outward</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience">
+    <div class="relative mb-16 text-left">
+      <h2 class="text-[2.5rem] md:text-[5.5rem] font-display-lg uppercase text-text-primary leading-none relative z-10 tracking-tight">2 YEARS OF</h2>
+      <div class="text-[3rem] md:text-[6.5rem] font-display-lg uppercase text-surface-variant opacity-30 leading-none -mt-4 md:-mt-6 relative z-0 tracking-tight">STUDY</div>
+    </div>
+    <div class="space-y-12">
+
+      <div class="group fade-up">
+        <div class="flex justify-between items-baseline mb-4 gap-4 flex-wrap">
+          <h3 class="text-headline-md font-headline-md text-text-primary">Shree L.R. Tiwari College of Engineering</h3>
+          <span class="text-label-md font-label-md text-text-secondary flex-shrink-0">2025 – 2029</span>
+        </div>
+        <p class="text-body-md font-body-md text-text-secondary border-l-2 border-border-subtle pl-6 group-hover:border-primary transition-colors">
+          BTech — Computer Engineering. 2nd year student specialising in AI/ML, full-stack development, and software engineering. Building production-grade applications as part of Team Clutch. Expected passout: 2029.
+        </p>
+        <div class="flex gap-2 mt-4 pl-6 flex-wrap">
+          <span class="bg-surface-elevated border border-border-subtle text-text-secondary px-3 py-1 rounded-full text-xs font-label-md">Mumbai</span>
+          <span class="bg-surface-elevated border border-border-subtle text-text-secondary px-3 py-1 rounded-full text-xs font-label-md">2nd Year</span>
+          <span class="bg-surface-elevated border border-border-subtle text-text-secondary px-3 py-1 rounded-full text-xs font-label-md">Passout 2029</span>
+        </div>
+      </div>
+
+      <div class="group fade-up">
+        <div class="flex justify-between items-baseline mb-4 gap-4 flex-wrap">
+          <h3 class="text-headline-md font-headline-md text-text-primary">Mithibai Junior College, Vile Parle</h3>
+          <span class="text-label-md font-label-md text-text-secondary flex-shrink-0">2022 – 2024</span>
+        </div>
+        <p class="text-body-md font-body-md text-text-secondary border-l-2 border-border-subtle pl-6 group-hover:border-primary transition-colors">
+          HSC — Science (Class XII). Completed higher secondary education with Physics, Chemistry &amp; Mathematics. Built strong foundations in analytical thinking and problem-solving. Passout: 2024.
+        </p>
+        <div class="flex gap-2 mt-4 pl-6 flex-wrap">
+          <span class="bg-surface-elevated border border-border-subtle text-text-secondary px-3 py-1 rounded-full text-xs font-label-md">Vile Parle, Mumbai</span>
+          <span class="bg-surface-elevated border border-border-subtle text-text-secondary px-3 py-1 rounded-full text-xs font-label-md">Passout 2024</span>
+        </div>
+      </div>
+
+      <div class="group fade-up">
+        <div class="flex justify-between items-baseline mb-4 gap-4 flex-wrap">
+          <h3 class="text-headline-md font-headline-md text-text-primary">Team Clutch — Hackathon Developer</h3>
+          <span class="text-label-md font-label-md text-text-secondary flex-shrink-0">2024 – Present</span>
+        </div>
+        <p class="text-body-md font-body-md text-text-secondary border-l-2 border-border-subtle pl-6 group-hover:border-primary transition-colors">
+          Designed and shipped MedBridge AI-Vision, CricSim-X, and Dynamic Transit MDT — delivering production-grade AI systems, ML pipelines, and real-time web platforms under hackathon constraints.
+        </p>
+        <div class="flex gap-2 mt-4 pl-6 flex-wrap">
+          <span class="bg-surface-elevated border border-border-subtle text-text-secondary px-3 py-1 rounded-full text-xs font-label-md">AI / ML</span>
+          <span class="bg-surface-elevated border border-border-subtle text-text-secondary px-3 py-1 rounded-full text-xs font-label-md">Full Stack</span>
+          <span class="bg-surface-elevated border border-border-subtle text-text-secondary px-3 py-1 rounded-full text-xs font-label-md">3 Projects</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ TOOLS ═══ -->
+  <section id="tools">
+    <div class="relative mb-16 text-left">
+      <h2 class="text-[2.5rem] md:text-[5.5rem] font-display-lg uppercase text-text-primary leading-none relative z-10 tracking-tight">PREMIUM</h2>
+      <div class="text-[3rem] md:text-[6.5rem] font-display-lg uppercase text-surface-variant opacity-30 leading-none -mt-4 md:-mt-6 relative z-0 tracking-tight">TOOLS</div>
+    </div>
+
+    <!-- 3-column grid — exact desktop screenshot layout -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10 mb-10">
+
+      <!-- React & Next.js -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <svg viewBox="-11.5 -10.23174 23 20.46348" width="36" height="36" fill="none">
+            <circle cx="0" cy="0" r="2.05" fill="#61DAFB"/>
+            <ellipse rx="11" ry="4.2" stroke="#61DAFB" stroke-width="1"/>
+            <ellipse rx="11" ry="4.2" stroke="#61DAFB" stroke-width="1" transform="rotate(60)"/>
+            <ellipse rx="11" ry="4.2" stroke="#61DAFB" stroke-width="1" transform="rotate(120)"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">React &amp; Next.js</h4>
+          <p class="text-text-secondary text-label-md font-label-md">Frontend Framework</p>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/python/3776AB" width="38" height="38" alt="Python"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Python</h4>
+          <p class="text-text-secondary text-label-md font-label-md">AI / ML Language</p>
+        </div>
+      </div>
+
+      <!-- Go -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/go/00ADD8" width="40" height="40" alt="Go"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Go</h4>
+          <p class="text-text-secondary text-label-md font-label-md">Systems Language</p>
+        </div>
+      </div>
+
+      <!-- TypeScript -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/typescript/3178C6" width="34" height="34" alt="TypeScript"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">TypeScript</h4>
+          <p class="text-text-secondary text-label-md font-label-md">Typed JavaScript</p>
+        </div>
+      </div>
+
+      <!-- Docker -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/docker/2496ED" width="40" height="40" alt="Docker"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Docker</h4>
+          <p class="text-text-secondary text-label-md font-label-md">Containerisation</p>
+        </div>
+      </div>
+
+      <!-- Supabase -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/supabase/3FCF8E" width="34" height="34" alt="Supabase"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Supabase</h4>
+          <p class="text-text-secondary text-label-md font-label-md">Backend &amp; Database</p>
+        </div>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/mongodb/47A248" width="34" height="34" alt="MongoDB"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">MongoDB</h4>
+          <p class="text-text-secondary text-label-md font-label-md">NoSQL Database</p>
+        </div>
+      </div>
+
+      <!-- Firebase -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/firebase/FFCA28" width="34" height="34" alt="Firebase"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Firebase</h4>
+          <p class="text-text-secondary text-label-md font-label-md">BaaS Platform</p>
+        </div>
+      </div>
+
+      <!-- Google Cloud -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/googlecloud/4285F4" width="36" height="36" alt="Google Cloud"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Google Cloud</h4>
+          <p class="text-text-secondary text-label-md font-label-md">Cloud Platform</p>
+        </div>
+      </div>
+
+      <!-- Vercel -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="#000">
+            <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Vercel</h4>
+          <p class="text-text-secondary text-label-md font-label-md">Deployment</p>
+        </div>
+      </div>
+
+      <!-- Gemini AI -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/googlegemini/8E75B2" width="34" height="34" alt="Gemini AI"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Gemini AI</h4>
+          <p class="text-text-secondary text-label-md font-label-md">AI / Vision Models</p>
+        </div>
+      </div>
+
+      <!-- Socket.io -->
+      <div class="flex items-start gap-4 cursor-pointer group fade-up">
+        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+          <img src="https://cdn.simpleicons.org/socketdotio/010101" width="34" height="34" alt="Socket.io"/>
+        </div>
+        <div>
+          <h4 class="text-headline-md font-headline-md leading-tight group-hover:text-primary transition-colors">Socket.io</h4>
+          <p class="text-text-secondary text-label-md font-label-md">Real-time Engine</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Languages strip -->
+    <div class="flex flex-wrap items-center gap-3 p-5 bg-surface-elevated rounded-2xl border border-border-subtle fade-up">
+      <span class="text-label-md font-label-md text-text-secondary uppercase tracking-widest mr-2 flex-shrink-0">Languages:</span>
+      <span class="bg-surface-container border border-border-subtle text-text-primary px-4 py-1.5 rounded-full text-sm font-label-md hover:border-primary transition-colors cursor-default">C</span>
+      <span class="bg-surface-container border border-border-subtle text-text-primary px-4 py-1.5 rounded-full text-sm font-label-md hover:border-primary transition-colors cursor-default">C++</span>
+      <span class="bg-surface-container border border-border-subtle text-text-primary px-4 py-1.5 rounded-full text-sm font-label-md hover:border-primary transition-colors cursor-default">Java</span>
+      <span class="bg-surface-container border border-border-subtle text-text-primary px-4 py-1.5 rounded-full text-sm font-label-md hover:border-secondary transition-colors cursor-default">Python</span>
+      <span class="bg-surface-container border border-border-subtle text-text-primary px-4 py-1.5 rounded-full text-sm font-label-md hover:border-primary transition-colors cursor-default">Go</span>
+      <span class="bg-surface-container border border-border-subtle text-text-primary px-4 py-1.5 rounded-full text-sm font-label-md hover:border-primary transition-colors cursor-default">HTML</span>
+      <span class="bg-surface-container border border-border-subtle text-text-primary px-4 py-1.5 rounded-full text-sm font-label-md hover:border-secondary transition-colors cursor-default">TypeScript</span>
+    </div>
+  </section>
+
+  <!-- ═══ THOUGHTS ═══ -->
+  <section id="thoughts">
+    <div class="relative mb-16 text-left">
+      <h2 class="text-[2.5rem] md:text-[5.5rem] font-display-lg uppercase text-text-primary leading-none relative z-10 tracking-tight">DESIGN</h2>
+      <div class="text-[3rem] md:text-[6.5rem] font-display-lg uppercase text-surface-variant opacity-30 leading-none -mt-4 md:-mt-6 relative z-0 tracking-tight">THOUGHTS</div>
+    </div>
+    <div class="grid gap-12">
+
+      <article class="group fade-up">
+        <h3 class="text-headline-md font-headline-md group-hover:text-primary transition-colors mb-2 cursor-pointer">Building MedBridge AI-Vision: Clinical AI at Hackathon Speed</h3>
+        <p class="text-text-secondary text-body-md mb-4 max-w-3xl">
+          How Team Clutch built a production-grade medical diagnostic platform with Gemini Vision in under 48 hours — resilient architecture, exponential backoff, and offline-first design.
+        </p>
+        <div class="flex items-center gap-4 text-label-md font-label-md text-text-secondary">
+          <span>May 2024</span>
+          <span class="w-1 h-1 rounded-full bg-border-subtle"></span>
+          <span>5 min read</span>
+        </div>
+      </article>
+
+      <article class="group fade-up">
+        <h3 class="text-headline-md font-headline-md group-hover:text-primary transition-colors mb-2 cursor-pointer">18 Seasons of IPL Data: Lessons from Building CricSim‑X</h3>
+        <p class="text-text-secondary text-body-md mb-4 max-w-3xl">
+          The engineering story behind training a stacking meta-classifier on 18 seasons of ball-by-ball IPL records and wrapping it in a premium editorial gold-and-teal dashboard.
+        </p>
+        <div class="flex items-center gap-4 text-label-md font-label-md text-text-secondary">
+          <span>Jun 2024</span>
+          <span class="w-1 h-1 rounded-full bg-border-subtle"></span>
+          <span>7 min read</span>
+        </div>
+      </article>
+
+      <article class="group fade-up">
+        <h3 class="text-headline-md font-headline-md group-hover:text-primary transition-colors mb-2 cursor-pointer">Monorepos, Socket.io &amp; Real-Time Transit: The MDT Story</h3>
+        <p class="text-text-secondary text-body-md mb-4 max-w-3xl">
+          Why we chose pnpm workspaces and Vite for a real-time transit intelligence platform — and what we learned about live data, AQI, and routing at hackathon pace.
+        </p>
+        <div class="flex items-center gap-4 text-label-md font-label-md text-text-secondary">
+          <span>Aug 2024</span>
+          <span class="w-1 h-1 rounded-full bg-border-subtle"></span>
+          <span>6 min read</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="pb-32 md:pb-section-gap">
+    <div class="text-center mb-16 fade-up">
+      <h2 class="text-display-lg-mobile md:text-display-lg font-display-lg uppercase leading-tight">
+        LET'S WORK<br/>
+        <span class="text-surface-variant opacity-30">TOGETHER</span>
+      </h2>
+      <p class="text-text-secondary text-body-md mt-4">Or drop me an email at <a href="mailto:ajayyadav04116@gmail.com" class="text-primary hover:underline">ajayyadav04116@gmail.com</a></p>
+    </div>
+    <form class="max-w-xl mx-auto space-y-6 fade-up" onsubmit="handleSubmit(event)">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <label class="text-label-md font-label-md text-text-secondary ml-1">Name</label>
+          <input class="w-full bg-surface-elevated border-border-subtle focus:border-primary focus:ring-0 rounded-xl px-4 py-3 text-body-md" placeholder="Your Name" type="text" required/>
+        </div>
+        <div class="space-y-2">
+          <label class="text-label-md font-label-md text-text-secondary ml-1">Email</label>
+          <input class="w-full bg-surface-elevated border-border-subtle focus:border-primary focus:ring-0 rounded-xl px-4 py-3 text-body-md" placeholder="your@email.com" type="email" required/>
+        </div>
+      </div>
+      <div class="space-y-2">
+        <label class="text-label-md font-label-md text-text-secondary ml-1">Budget / Type</label>
+        <select class="w-full bg-surface-elevated border-border-subtle focus:border-primary focus:ring-0 rounded-xl px-4 py-3 text-body-md text-text-secondary">
+          <option>Select...</option>
+          <option>Internship</option>
+          <option>Collaboration</option>
+          <option>Freelance</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="space-y-2">
+        <label class="text-label-md font-label-md text-text-secondary ml-1">Message</label>
+        <textarea class="w-full bg-surface-elevated border-border-subtle focus:border-primary focus:ring-0 rounded-xl px-4 py-3 text-body-md" placeholder="Tell me about your project or opportunity..." rows="4" required></textarea>
+      </div>
+      <button class="w-full bg-primary-container text-white font-headline-md py-4 rounded-xl hover:bg-primary-container/90 active:scale-[0.98] transition-all" id="submitBtn" type="submit">Submit</button>
+      <p class="text-center text-text-secondary text-label-md hidden" id="formOk">✅ Message sent! I'll reply within 24 hours.</p>
+    </form>
+  </section>
+
+  </div> <!-- End Right Content -->
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="w-full py-gutter bg-surface-container-lowest border-t border-border-subtle flex flex-col items-center justify-center gap-base px-margin-mobile text-center">
+  <p class="text-text-secondary text-body-md font-body-md">Ajay Yadav &nbsp;·&nbsp; BTech CE @ SLRTCE Mumbai &nbsp;·&nbsp; © <span id="currentYear">2026</span></p>
+  <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+  <div class="flex flex-wrap justify-center gap-4 mt-2">
+    <a href="#home" class="text-text-secondary text-label-md hover:text-primary transition-colors">Home</a>
+    <a href="#projects" class="text-text-secondary text-label-md hover:text-primary transition-colors">Projects</a>
+    <a href="#experience" class="text-text-secondary text-label-md hover:text-primary transition-colors">Experience</a>
+    <a href="#tools" class="text-text-secondary text-label-md hover:text-primary transition-colors">Tools</a>
+    <a href="#contact" class="text-text-secondary text-label-md hover:text-primary transition-colors">Contact</a>
+  </div>
+  <div class="flex flex-wrap justify-center gap-6 mt-2">
+    <a href="mailto:ajayyadav04116@gmail.com" class="text-text-secondary hover:text-primary transition-colors" title="Email" target="_blank" rel="noopener">
+      <span class="material-symbols-outlined text-xl">mail</span>
+    </a>
+    <a href="https://github.com/ajayXcode" class="text-text-secondary hover:text-primary transition-colors flex items-center" title="GitHub" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/ajay-yadav04/" class="text-text-secondary hover:text-primary transition-colors flex items-center" title="LinkedIn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<!-- ═══ BOTTOM NAV (Mobile) ═══ -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-4 pb-4 bg-surface-container border-t border-border-subtle shadow-lg z-50 rounded-t-2xl">
+  <a class="flex flex-col items-center justify-center bg-secondary-container/20 text-secondary rounded-full p-2" href="#home">
+    <span class="material-symbols-outlined">home</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-bright transition-all rounded-lg" href="#projects">
+    <span class="material-symbols-outlined">folder_open</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-bright transition-all rounded-lg" href="#experience">
+    <span class="material-symbols-outlined">work_history</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-bright transition-all rounded-lg" href="#tools">
+    <span class="material-symbols-outlined">build</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-bright transition-all rounded-lg" href="#thoughts">
+    <span class="material-symbols-outlined">edit_note</span>
+  </a>
+</nav>
+
+<script>
+// Mobile menu logic removed since we use bottom nav and pill nav
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (!t) return;
+    e.preventDefault();
+    window.scrollTo({ top: t.offsetTop - 64, behavior: 'smooth' });
+  });
+});
+
+
+
+// Counters
+function countTo(el, target, isYear) {
+  let s = null;
+  const dur = 1500, from = isYear ? target - 10 : 0;
+  const suffix = isYear ? '' : '+';
+  (function step(ts) {
+    if (!s) s = ts;
+    const p = Math.min((ts - s) / dur, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(from + (target - from) * ease) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+    else el.textContent = target + suffix;
+  })(0);
+  requestAnimationFrame(ts => {
+    let s2 = null;
+    const step2 = ts2 => {
+      if (!s2) s2 = ts2;
+      const p = Math.min((ts2 - s2) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(from + (target - from) * ease) + suffix;
+      if (p < 1) requestAnimationFrame(step2);
+      else el.textContent = target + suffix;
+    };
+    requestAnimationFrame(step2);
+  });
+}
+
+const cio = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const v = parseInt(e.target.dataset.count);
+      const isYear = !!e.target.dataset.year;
+      if (!isNaN(v)) countTo(e.target, v, isYear);
+      cio.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+// Contact form
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const ok = document.getElementById('formOk');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Sent ✓';
+    btn.classList.replace('bg-primary-container', 'bg-green-700');
+    ok.classList.remove('hidden');
+    setTimeout(() => {
+      btn.textContent = 'Submit';
+      btn.classList.replace('bg-green-700', 'bg-primary-container');
+      btn.disabled = false;
+      ok.classList.add('hidden');
+      e.target.reset();
+    }, 4000);
+  }, 1400);
+}
+
+// Micro interactions
+document.querySelectorAll('.cursor-pointer, [class*="group"]').forEach(card => {
+  card.addEventListener('mousedown', () => card.classList.add('scale-95'));
+  card.addEventListener('mouseup',   () => card.classList.remove('scale-95'));
+  card.addEventListener('mouseleave',() => card.classList.remove('scale-95'));
+});
+
+// Active nav highlight
+const sections = ['home','projects','experience','tools','thoughts','contact'];
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 80;
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (y >= el.offsetTop && y < el.offsetTop + el.offsetHeight) {
+      document.querySelectorAll('header a, #desktopNav a').forEach(a => {
+        a.classList.remove('text-secondary','font-bold');
+        a.classList.add('text-on-surface-variant');
+      });
+      const link = document.querySelector(`#desktopNav a[href="#${id}"]`);
+      if (link) { link.classList.add('text-secondary','font-bold'); link.classList.remove('text-on-surface-variant'); }
+    }
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
