@@ -3407,7 +3407,7 @@
             <main class="pt-0">
                 
                 <!-- 1. HERO -->
-                <section id="hero" class="h-screen w-full relative overflow-hidden flex flex-col justify-center items-center border-b-grid bg-[#01040a] cursor-none" style="transform-style: preserve-3d; perspective: 1200px;">
+                <section id="hero" class="h-screen w-full relative overflow-hidden flex flex-col justify-center items-center border-b-grid bg-[#01040a] cursor-none" style="perspective: 1200px;">
                     <div id="hero-bg-target" class="absolute inset-0 w-full h-full will-change-transform flex items-center justify-center scale-105">
                         <div id="intro-thumb-container" class="absolute inset-0 w-full h-full will-change-transform">
                             <div class="w-full h-full bg-[#01040A] relative flex items-center justify-center overflow-hidden">
@@ -3419,48 +3419,49 @@
                     </div>
                     <div id="hero-lighting" class="absolute inset-0 w-full h-full pointer-events-none opacity-0 mix-blend-multiply z-10 will-change-[background]" style="background: radial-gradient(circle 1100px at 50% 50%, rgba(244, 239, 230, 0) 0%, rgba(5, 16, 36, 0.65) 100%);"></div>
                     
-                    <!-- Hero Centerpiece: Pop-Art Avatar Sticker + Name + Tagline -->
-                <!-- Hero Centerpiece: Baaz-Style Giant Dr_Sugiyama Name + Big Blended Cutout -->
-                <div id="hero-text-wrapper" class="hero-overlay-text absolute inset-0 flex flex-col justify-end items-center z-20 pointer-events-none opacity-0 pb-24 sm:pb-28 md:pb-32 overflow-hidden">
-                    
-                    <!-- Giant Name: Dr_Sugiyama font at Baaz scale (behind portrait) -->
-                    <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none select-none">
-                        <h1 id="hero-text-3d" class="font-['Dr_Sugiyama'] text-[#F4EFE6] leading-none pointer-events-auto cursor-hover opacity-100 will-change-transform select-none" 
-                            style="font-size: clamp(160px, min(28vw, 50vh), 480px); letter-spacing: -0.02em; transform: rotate(-4deg) translateY(-50px); text-shadow: 0 0 50px rgba(1,44,235,0.4), 0 0 100px rgba(1,44,235,0.2);">
-                            ajay
-                        </h1>
-                    </div>
+                <!-- ① Giant "ajay" text — z-10 — BEHIND the photo -->
+                <!-- mask-image fades bottom 30% to match the photo's own mask, so text
+                     never bleeds through where the image becomes transparent -->
+                <div class="hero-overlay-text absolute inset-0 flex items-center justify-center z-10 pointer-events-none select-none opacity-0"
+                     style="isolation: isolate; transform-style: flat;
+                            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 80%);
+                            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 80%);">
+                    <h1 id="hero-text-3d"
+                        class="font-['Dr_Sugiyama'] text-[#F4EFE6] leading-none pointer-events-auto cursor-hover will-change-transform select-none"
+                        style="font-size: clamp(170px, min(29vw, 52vh), 490px); letter-spacing: -0.02em; opacity: 0.82; transform: rotate(-4deg) translateY(-60px); text-shadow: 0 0 55px rgba(1,44,235,0.45), 0 0 110px rgba(1,44,235,0.22);">
+                        ajay
+                    </h1>
+                </div>
 
-                    <!-- Big Blended Cutout (fades smoothly into dark bottom) -->
-                    <div class="relative z-20 w-[300px] sm:w-[420px] md:w-[490px] max-w-[90vw] h-[46vh] sm:h-[54vh] md:h-[58vh] flex items-end justify-center pointer-events-none select-none">
-                        <img src="./ajay_sticker.png" alt="Ajay Yadav" 
-                             class="w-full h-full object-contain object-bottom filter drop-shadow-[0_0_35px_rgba(1,44,235,0.35)] pointer-events-auto cursor-hover"
-                             style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 96%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 96%);" />
-                        
-                        <!-- Verified Creator & Identity Badge pinned near bottom of cutout -->
-                        <div class="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 pointer-events-auto z-30 whitespace-nowrap">
-                            <div class="flex items-center gap-2 bg-[#012CEB] border-2 border-white px-3 py-1 shadow-[4px_4px_0_#000] hover:scale-105 transition-transform cursor-pointer">
+                <!-- ② Cutout photo + badge + tagline — z-30 — IN FRONT of the text -->
+                <div id="hero-text-wrapper" class="hero-overlay-text absolute inset-0 flex flex-col justify-end items-center z-30 pointer-events-none opacity-0 pb-24 sm:pb-28 md:pb-32 overflow-hidden" style="isolation: isolate;">
+
+                    <!-- Big Blended Cutout (fades into dark bottom at 70%) -->
+                    <div class="relative w-[320px] sm:w-[450px] md:w-[520px] max-w-[92vw] h-[50vh] sm:h-[58vh] md:h-[63vh] flex items-end justify-center pointer-events-none select-none">
+                        <img src="./ajay_sticker.png" alt="Ajay Yadav"
+                             class="w-full h-full object-contain object-bottom filter drop-shadow-[0_0_40px_rgba(1,44,235,0.38)] pointer-events-auto cursor-hover"
+                             style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 98%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 98%);" />
+
+                        <!-- @aajay.ai • 18K+ Followers Badge -->
+                        <div class="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 pointer-events-auto whitespace-nowrap">
+                            <div class="flex items-center gap-2 bg-[#012CEB] border-2 border-white px-3.5 py-1.5 shadow-[4px_4px_0_#000] hover:scale-105 transition-transform cursor-pointer">
                                 <span class="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
-                                <span class="font-['DM_Mono'] text-[10px] sm:text-xs font-bold text-white uppercase tracking-wider">@aajay.ai • AI SYSTEMS BUILDER</span>
+                                <span class="font-['DM_Mono'] text-[10px] sm:text-xs font-bold text-white uppercase tracking-wider">@aajay.ai • <span id="hero-ig-count">18K+</span> FOLLOWERS</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Authentic Tagline below cutout -->
-                    <div class="relative z-30 mt-2 text-center pointer-events-auto px-4 max-w-xl">
+                    <div class="relative mt-2 text-center pointer-events-auto px-4 max-w-xl">
                         <p class="font-['Schoolbell'] text-base sm:text-xl md:text-2xl text-[#ECE8E1] tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                             Architecting Intelligent Systems &amp; Building in Public.
                         </p>
                     </div>
 
                 </div>
-                    <!-- Sound Toggle -->
-                    <button id="sound-toggle" data-no-cursor-change class="absolute bottom-6 right-6 md:bottom-12 md:right-12 z-50 w-12 h-12 md:w-16 md:h-16 rounded-full border-[2px] border-[var(--navy)] bg-[var(--beige)] text-[var(--navy)] flex items-center justify-center hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F35FF] shadow-[4px_4px_0_rgba(5,16,36,0.9)] cursor-hover pointer-events-auto">
-                        <svg class="sound-icon-off w-7 h-7 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
-                        <svg class="sound-icon-on w-7 h-7 md:w-10 md:h-10 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                    </button>
-                    
-                    
+
+
+
                     <!-- Top Right: Creative Midnight Graph Note -->
                     <div id="hero-quote-block" class="hero-overlay-text absolute top-[12%] md:top-[18%] lg:top-[8%] xl:top-[18%] right-[5%] md:right-[8%] lg:right-[3%] xl:right-[8%] z-[9999] opacity-0 pointer-events-auto">
                         <div class="relative flex flex-col md:flex-row items-end md:items-center p-2 max-w-[500px]">
@@ -4439,9 +4440,12 @@
                                         Creating visual breakdowns on modern AI tools, full-stack architectures, coding workflows, and software engineering insights for a growing tech community.
                                     </p>
                                     <div class="flex flex-wrap items-center gap-3 pt-1 text-[11px] font-['DM_Mono'] text-white/60">
-                                        <span class="flex items-center gap-1 text-[#F4EFE6]"><strong class="text-white">10K+</strong> Tech Followers</span>
+                                        <span class="flex items-center gap-2 text-[#F4EFE6]">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse inline-block"></span>
+                                            <strong class="text-white text-[13px]" id="creator-card-ig-count">18K+</strong> Instagram Followers
+                                        </span>
                                         <span>•</span>
-                                        <span class="text-[#E1306C] font-semibold">Daily Tech Insights</span>
+                                        <span class="text-[#E1306C] font-semibold">Daily AI Insights</span>
                                         <span>•</span>
                                         <span>Practical Coding Reels</span>
                                     </div>
@@ -4922,26 +4926,25 @@
         let isAudioInit = false;
 
         const soundToggleBtn = document.getElementById('sound-toggle');
-        const soundIconOff = soundToggleBtn.querySelector('.sound-icon-off');
-        const soundIconOn = soundToggleBtn.querySelector('.sound-icon-on');
+        if (soundToggleBtn) {
+            const soundIconOff = soundToggleBtn.querySelector('.sound-icon-off');
+            const soundIconOn = soundToggleBtn.querySelector('.sound-icon-on');
 
-        soundToggleBtn.addEventListener('click', async (e) => {
-            e.stopPropagation();
-            if (!isAudioInit) {
-                // Resume AudioContext (browsers suspend it until a user gesture)
-                await Tone.start();
-                isAudioInit = true;
-                soundIconOff.classList.add('hidden');
-                soundIconOn.classList.remove('hidden');
-            } else {
-                isAudioInit = false;
-                soundIconOff.classList.remove('hidden');
-                soundIconOn.classList.add('hidden');
-                // Suspend the AudioContext so nothing can slip through even if
-                // isAudioInit is bypassed somewhere
-                try { await Tone.getContext().rawContext.suspend(); } catch (_) {}
-            }
-        });
+            soundToggleBtn.addEventListener('click', async (e) => {
+                e.stopPropagation();
+                if (!isAudioInit) {
+                    await Tone.start();
+                    isAudioInit = true;
+                    soundIconOff.classList.add('hidden');
+                    soundIconOn.classList.remove('hidden');
+                } else {
+                    isAudioInit = false;
+                    soundIconOff.classList.remove('hidden');
+                    soundIconOn.classList.add('hidden');
+                    try { await Tone.getContext().rawContext.suspend(); } catch (_) {}
+                }
+            });
+        }
         
         const uiReverb = new Tone.Reverb({ decay: 4, wet: 0.6 }).toDestination();
         const dopaminePad = new Tone.PolySynth(Tone.AMSynth, {
@@ -8082,6 +8085,66 @@
                     window.location.href = mailtoUrl;
                 }, 600);
             });
+        })();
+    </script>
+
+
+    <!-- Live Instagram Follower Counter -->
+    <script>
+        (function() {
+            const FALLBACK = '18K+';
+            const HANDLE = 'aajay.ai';
+
+            function formatCount(n) {
+                if (n >= 1000000) return (n / 1000000).toFixed(1).replace('.0','') + 'M+';
+                if (n >= 1000)    return (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace('.0','') + 'K+';
+                return n.toString();
+            }
+
+            function setCount(val) {
+                const heroEl   = document.getElementById('hero-ig-count');
+                const cardEl   = document.getElementById('creator-card-ig-count');
+                if (heroEl)  heroEl.textContent  = val;
+                if (cardEl)  cardEl.textContent  = val;
+            }
+
+            async function fetchFollowers() {
+                /* Public read-only Instagram endpoint via iGram stats proxy (no auth needed).
+                   Falls back immediately if CORS / network error. */
+                try {
+                    const res = await fetch(
+                        `https://www.instagram.com/${HANDLE}/?__a=1&__d=dis`,
+                        { method: 'GET', mode: 'cors', cache: 'no-store' }
+                    );
+                    if (!res.ok) throw new Error('not ok');
+                    const json = await res.json();
+                    const count = json?.graphql?.user?.edge_followed_by?.count
+                               || json?.data?.user?.edge_followed_by?.count;
+                    if (count) {
+                        setCount(formatCount(count));
+                        return;
+                    }
+                } catch (_) { /* silent — API is CORS restricted in browser */ }
+
+                /* Secondary: try a public stats proxy (no auth) */
+                try {
+                    const res2 = await fetch(
+                        `https://api.spencerwoo.com/substats/?source=instagram&queryKey=${HANDLE}`,
+                        { cache: 'no-store' }
+                    );
+                    if (!res2.ok) throw new Error('not ok');
+                    const j2 = await res2.json();
+                    const count2 = j2?.data?.totalSubs;
+                    if (count2) { setCount(formatCount(count2)); return; }
+                } catch (_) { /* silent */ }
+
+                /* Fallback: hard-code current known count */
+                setCount(FALLBACK);
+            }
+
+            // Run on load + every 5 min
+            document.addEventListener('DOMContentLoaded', fetchFollowers);
+            setInterval(fetchFollowers, 5 * 60 * 1000);
         })();
     </script>
 
