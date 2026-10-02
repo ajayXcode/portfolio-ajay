@@ -3419,9 +3419,36 @@
                     </div>
                     <div id="hero-lighting" class="absolute inset-0 w-full h-full pointer-events-none opacity-0 mix-blend-multiply z-10 will-change-[background]" style="background: radial-gradient(circle 1100px at 50% 50%, rgba(244, 239, 230, 0) 0%, rgba(5, 16, 36, 0.65) 100%);"></div>
                     
-                    <!-- Hero center text removed per request -->
-                <div id="hero-text-wrapper" class="hidden pointer-events-none">
-                    <h1 id="hero-text-3d" class="hidden"></h1>
+                    <!-- Hero Centerpiece: Pop-Art Avatar Sticker + Name + Tagline -->
+                <div id="hero-text-wrapper" class="hero-overlay-text absolute inset-0 flex flex-col justify-center items-center z-20 pointer-events-none opacity-0 px-4 -translate-y-8 md:-translate-y-12">
+                    <div class="relative flex flex-col items-center justify-center text-center pointer-events-auto">
+                        
+                        <!-- Die-Cut Pop-Art Vinyl Sticker -->
+                        <div class="relative w-32 h-28 sm:w-40 sm:h-36 md:w-48 md:h-40 mb-3 sm:mb-4 select-none filter drop-shadow-[0_12px_32px_rgba(1,44,235,0.5)] hover:scale-105 hover:-rotate-2 transition-transform duration-300 group cursor-pointer">
+                            <img src="./ajay_sticker.png" alt="Ajay Yadav" class="w-full h-full object-contain pointer-events-auto" />
+                            <!-- Verified Creator Pill on Sticker -->
+                            <div class="absolute -bottom-2 sm:-bottom-2.5 right-1/2 translate-x-1/2 bg-[#012CEB] border-2 border-white text-white px-2.5 py-0.5 font-['DM_Mono'] text-[9px] sm:text-[10px] font-bold uppercase tracking-wider shadow-[3px_3px_0_#000] whitespace-nowrap">
+                                @aajay.ai • BUILDER
+                            </div>
+                        </div>
+
+                        <!-- Name & Core Focus -->
+                        <div class="flex flex-col items-center max-w-xl">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
+                                <span class="font-['DM_Mono'] text-[10px] sm:text-xs font-bold text-white/80 uppercase tracking-[0.25em]">AI SYSTEMS • FULL-STACK • CREATOR</span>
+                            </div>
+                            
+                            <h1 id="hero-text-3d" class="font-['Open_Sauce_One'] font-[900] text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-none uppercase drop-shadow-[0_4px_32px_rgba(1,44,235,0.5)]">
+                                AJAY YADAV
+                            </h1>
+                            
+                            <p class="font-['Schoolbell'] text-lg sm:text-2xl md:text-3xl text-[#ECE8E1] tracking-wide mt-2 sm:mt-3 leading-snug drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
+                                Architecting Intelligent Systems &amp; Building in Public.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
                     <!-- Sound Toggle -->
                     <button id="sound-toggle" data-no-cursor-change class="absolute bottom-6 right-6 md:bottom-12 md:right-12 z-50 w-12 h-12 md:w-16 md:h-16 rounded-full border-[2px] border-[var(--navy)] bg-[var(--beige)] text-[var(--navy)] flex items-center justify-center hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F35FF] shadow-[4px_4px_0_rgba(5,16,36,0.9)] cursor-hover pointer-events-auto">
@@ -3470,7 +3497,7 @@
                     </div>
 
                     <!-- Bottom Left: Career Progression Annotation Strip -->
-                    <div id="hero-roles-block" class="hero-overlay-text absolute bottom-[10%] md:bottom-[15%] left-[5%] md:left-[8%] z-[9999] opacity-0 pointer-events-none">
+                    <div id="hero-roles-block" class="hero-overlay-text absolute bottom-[10%] md:bottom-[15%] left-[5%] md:left-[8%] z-[9999] opacity-0 pointer-events-none hidden md:block">
                         <div class="relative flex flex-col gap-6 md:gap-8 will-change-transform max-w-[280px]">
                             
                             <!-- Stage 1 -->
@@ -3979,7 +4006,7 @@
                                             <!-- Cutout Portrait with Blueprint Circle Overlay -->
                                             <div id="personal-cutout" class="absolute bottom-[-2%] left-[5%] w-[35%] h-[45%] pointer-events-none z-[10] focus-lift-target">
                                                 <!-- Portrait image -->
-                                                <div class="w-full h-full bg-[url('./ajay.jpeg')] bg-contain bg-bottom bg-no-repeat relative z-10"></div>
+                                                <div class="w-full h-full bg-[url('./ajay_sticker.png')] bg-contain bg-bottom bg-no-repeat relative z-10"></div>
                                                 
                                                 <!-- Blueprint Radial Target Line around Portrait -->
                                                 <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-100 z-20" viewBox="0 0 200 200">
@@ -4390,8 +4417,8 @@
                             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 relative z-10">
                                 <!-- Instagram Avatar Ring -->
                                 <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-1 shadow-lg shrink-0 flex items-center justify-center">
-                                    <div class="w-full h-full rounded-[14px] bg-[#0A0D14] flex flex-col items-center justify-center text-white">
-                                        <svg class="w-8 h-8 fill-current text-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    <div class="w-full h-full rounded-[14px] bg-[#0A0D14] overflow-hidden flex items-center justify-center">
+                                        <img src="./ajay_avatar.jpg" alt="@aajay.ai" class="w-full h-full object-cover" />
                                     </div>
                                 </div>
 
