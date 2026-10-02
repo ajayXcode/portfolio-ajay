@@ -3380,7 +3380,7 @@
 
         <!-- Left: Name -->
         <div class="flex items-center justify-center px-6 md:px-12 bg-[#0a0a0a] text-white border-r-[2px] border-[#0a0a0a] pointer-events-auto font-bold tracking-[0.1em] whitespace-nowrap font-['Gloria_Hallelujah'] text-[13px]">
-            Ajay Yadav AKA AY
+            Ajay Yadav
         </div>
 
         <!-- Center: Rotating Quotes -->
@@ -3424,27 +3424,32 @@
                     <div class="relative flex flex-col items-center justify-center text-center pointer-events-auto">
                         
                         <!-- Die-Cut Pop-Art Vinyl Sticker -->
-                        <div class="relative w-32 h-28 sm:w-40 sm:h-36 md:w-48 md:h-40 mb-3 sm:mb-4 select-none filter drop-shadow-[0_12px_32px_rgba(1,44,235,0.5)] hover:scale-105 hover:-rotate-2 transition-transform duration-300 group cursor-pointer">
+                        <div class="relative w-28 h-24 sm:w-36 sm:h-32 md:w-44 md:h-38 mb-3 sm:mb-4 select-none filter drop-shadow-[0_12px_28px_rgba(1,44,235,0.45)] hover:scale-105 hover:-rotate-2 transition-transform duration-300 group cursor-pointer">
                             <img src="./ajay_sticker.png" alt="Ajay Yadav" class="w-full h-full object-contain pointer-events-auto" />
                             <!-- Verified Creator Pill on Sticker -->
-                            <div class="absolute -bottom-2 sm:-bottom-2.5 right-1/2 translate-x-1/2 bg-[#012CEB] border-2 border-white text-white px-2.5 py-0.5 font-['DM_Mono'] text-[9px] sm:text-[10px] font-bold uppercase tracking-wider shadow-[3px_3px_0_#000] whitespace-nowrap">
+                            <div class="absolute -bottom-2 right-1/2 translate-x-1/2 bg-[#012CEB] border-2 border-white text-white px-2.5 py-0.5 font-['DM_Mono'] text-[9px] sm:text-[10px] font-bold uppercase tracking-wider shadow-[3px_3px_0_#000] whitespace-nowrap">
                                 @aajay.ai • BUILDER
                             </div>
                         </div>
 
-                        <!-- Name & Core Focus -->
-                        <div class="flex flex-col items-center max-w-xl">
-                            <div class="flex items-center gap-2 mb-2">
+                        <!-- Refined Headline, Name & High-Impact Identity -->
+                        <div class="flex flex-col items-center max-w-2xl px-2">
+                            <!-- Focus & Credentials Pill -->
+                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#012CEB]/15 border border-[#012CEB]/40 rounded-full mb-3 backdrop-blur-sm shadow-[0_2px_10px_rgba(1,44,235,0.2)]">
                                 <span class="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
-                                <span class="font-['DM_Mono'] text-[10px] sm:text-xs font-bold text-white/80 uppercase tracking-[0.25em]">AI SYSTEMS • FULL-STACK • CREATOR</span>
+                                <span class="font-['DM_Mono'] text-[10px] sm:text-xs font-bold text-white/90 uppercase tracking-[0.2em]">
+                                    AI Systems Engineer • 4x Hackathon Finalist
+                                </span>
                             </div>
                             
-                            <h1 id="hero-text-3d" class="font-['Open_Sauce_One'] font-[900] text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-none uppercase drop-shadow-[0_4px_32px_rgba(1,44,235,0.5)]">
-                                AJAY YADAV
+                            <!-- Elegant, Clean Name Heading (No clunky 3D block extrusion) -->
+                            <h1 id="hero-text-3d" class="font-['Inter'] font-extrabold text-4xl sm:text-6xl md:text-7xl text-white tracking-tight leading-tight select-none">
+                                Hey, I'm <span class="relative inline-block text-white">Ajay Yadav<span class="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-[3px] sm:h-[4px] bg-[#012CEB] rounded-full shadow-[0_0_12px_#012CEB]"></span></span>
                             </h1>
                             
-                            <p class="font-['Schoolbell'] text-lg sm:text-2xl md:text-3xl text-[#ECE8E1] tracking-wide mt-2 sm:mt-3 leading-snug drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
-                                Architecting Intelligent Systems &amp; Building in Public.
+                            <!-- Meaningful Punchline connecting with midnight theme -->
+                            <p class="font-['Schoolbell'] text-lg sm:text-2xl md:text-3xl text-[#ECE8E1] tracking-wide mt-3 sm:mt-4 leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                                Building autonomous AI systems by day, shipping code &amp; content by midnight.
                             </p>
                         </div>
 
@@ -5272,7 +5277,7 @@
                 opacity: 1, 
                 scale: 1, 
                 y: 0, 
-                rotate: -4,              // keep the rotation — just scale up
+                rotate: 0,              // keep the rotation — just scale up
                 duration: d * 1.1,       // slightly longer for drama
                 ease: "expo.out" 
             }, d * 0.4);
@@ -5289,7 +5294,7 @@
                 opacity: 1, 
                 scale: 1, 
                 y: 0, 
-                rotate: -4,              // keep the rotation — just scale up
+                rotate: 0,              // keep the rotation — just scale up
                 duration: d * 1.1,       // slightly longer for drama
                 ease: "expo.out" 
             }, d * 0.4);
@@ -5810,18 +5815,9 @@
                 const shX = normX * -shadowMax; 
                 const shY = normY * -shadowMax;
                 
-                let shadowStr = '';
-                const layers = 40; 
-                for(let i=1; i<=layers; i++) {
-                    const factor = i / layers;
-                    const r = Math.round(1 + (5 - 1) * factor);
-                    const g = Math.round(44 + (16 - 44) * factor);
-                    const b = Math.round(235 + (36 - 235) * factor);
-                    shadowStr += `${shX * factor}px ${shY * factor}px 0 rgba(${r},${g},${b}, 1), `;
-                }
-                const shBlur = isMagneticLock ? 40 : 25; 
-                shadowStr += `${shX * 1.1}px ${shY * 1.1}px ${shBlur}px rgba(5, 16, 36, 0.8)`;
-                heroText3d.style.textShadow = shadowStr;
+                // Elegant ambient glow instead of heavy 40-layer 3D block extrusion
+                const shBlur = isMagneticLock ? 35 : 22;
+                heroText3d.style.textShadow = `${shX * 0.15}px ${shY * 0.15}px ${shBlur}px rgba(1, 44, 235, 0.4), 0 4px 12px rgba(0, 0, 0, 0.7)`;
             }
 
             if (heroLighting) {
