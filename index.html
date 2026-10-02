@@ -3412,18 +3412,17 @@
                         <div id="intro-thumb-container" class="absolute inset-0 w-full h-full will-change-transform">
                             <div class="w-full h-full bg-[#01040A] relative flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(#012CEB_1px,transparent_1px)] [background-size:32px_32px] opacity-20"></div>
-        <div class="absolute -bottom-20 right-0 font-['Bebas_Neue'] text-[30vw] leading-none text-white/[0.03] select-none pointer-events-none">YADAV</div>
+        
     </div>
                             <div id="intro-thumb-lighting" class="absolute inset-0 w-full h-full mix-blend-multiply pointer-events-none z-[5]" style="background: radial-gradient(circle at center, rgba(244,239,230,0) 0%, rgba(5,16,36,0.7) 100%);"></div>
                         </div>
                     </div>
                     <div id="hero-lighting" class="absolute inset-0 w-full h-full pointer-events-none opacity-0 mix-blend-multiply z-10 will-change-[background]" style="background: radial-gradient(circle 1100px at 50% 50%, rgba(244, 239, 230, 0) 0%, rgba(5, 16, 36, 0.65) 100%);"></div>
                     
-                    <div id="hero-text-wrapper" class="absolute inset-0 flex flex-col justify-center items-center z-20 pointer-events-none transform-style: preserve-3d;">
-                        <h1 id="hero-text-3d" class="relative font-['Dr_Sugiyama'] text-[var(--beige)] leading-none flex items-baseline pointer-events-auto cursor-hover opacity-100 will-change-transform transition-shadow duration-300" style="font-size: clamp(150px, min(29.375vw, 53vh), 564px); letter-spacing: -0.019em; transform: rotate(0deg) scale(1) translateY(0px); font-weight: 400; transform-origin: center center;">
-                            Ajay
-                        </h1>
-                    </div>
+                    <!-- Hero center text removed per request -->
+                <div id="hero-text-wrapper" class="hidden pointer-events-none">
+                    <h1 id="hero-text-3d" class="hidden"></h1>
+                </div>
                     <!-- Sound Toggle -->
                     <button id="sound-toggle" data-no-cursor-change class="absolute bottom-6 right-6 md:bottom-12 md:right-12 z-50 w-12 h-12 md:w-16 md:h-16 rounded-full border-[2px] border-[var(--navy)] bg-[var(--beige)] text-[var(--navy)] flex items-center justify-center hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F35FF] shadow-[4px_4px_0_rgba(5,16,36,0.9)] cursor-hover pointer-events-auto">
                         <svg class="sound-icon-off w-7 h-7 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
@@ -4383,26 +4382,50 @@
                                 </p>
                             </div>
 
-                            <!-- Creator Spotlight Ticket -->
-                            <a href="https://www.instagram.com/aajay.ai/" target="_blank" rel="noopener noreferrer" 
-                               class="bg-[#F4EFE6] text-[#051024] p-4 sm:p-5 border-[3px] border-[#0A0A0A] shadow-[6px_6px_0_#012CEB] hover:shadow-[8px_8px_0_#E1306C] hover:-translate-y-1 transition-all duration-200 flex flex-col gap-2 max-w-md group cursor-pointer">
-                                <div class="flex items-center justify-between border-b border-black/15 pb-2">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center text-white">
-                                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                                        </div>
-                                        <span class="font-['DM_Mono'] text-xs font-black text-[#E1306C]">@aajay.ai</span>
+                            <!-- Dedicated Creator Spotlight Card (Distinct High-Impact Design) -->
+                        <div class="relative bg-gradient-to-br from-[#13111C] via-[#0E121D] to-[#160B18] border-[3px] border-[#E1306C] p-6 sm:p-8 shadow-[8px_8px_0_#E1306C] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 overflow-hidden">
+                            <!-- Background Neon Glow -->
+                            <div class="absolute -right-20 -top-20 w-60 h-60 bg-[#E1306C]/10 rounded-full blur-3xl pointer-events-none"></div>
+                            
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 relative z-10">
+                                <!-- Instagram Avatar Ring -->
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-1 shadow-lg shrink-0 flex items-center justify-center">
+                                    <div class="w-full h-full rounded-[14px] bg-[#0A0D14] flex flex-col items-center justify-center text-white">
+                                        <svg class="w-8 h-8 fill-current text-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                     </div>
-                                    <span class="font-['Open_Sauce_One'] text-[9px] font-bold text-[#012CEB] uppercase tracking-wider bg-blue-100 px-2 py-0.5 border border-[#012CEB]/30">AI CONTENT CREATOR</span>
                                 </div>
-                                <p class="font-['DM_Sans'] text-xs text-[#051024]/80 leading-normal">
-                                    Creating deep-dive visual breakdowns on modern AI engineering, Gemini 2.0 systems, and software architectures.
-                                </p>
-                                <div class="flex items-center justify-between text-[11px] font-['DM_Mono'] font-bold text-[#012CEB] group-hover:text-[#E1306C] transition-colors pt-1">
-                                    <span>EXPLORE ON INSTAGRAM</span>
-                                    <span class="transform group-hover:translate-x-1 transition-transform">↗</span>
+
+                                <div class="flex flex-col gap-1.5">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <span class="font-['Open_Sauce_One'] font-black text-xl sm:text-2xl text-white tracking-tight">@aajay.ai</span>
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-['DM_Mono'] font-bold bg-[#E1306C] text-white uppercase tracking-wider flex items-center gap-1 shadow-sm">
+                                            <span>✓</span>
+                                            <span>AI CONTENT CREATOR</span>
+                                        </span>
+                                        <span class="px-2 py-0.5 bg-white/10 text-white/70 text-[10px] font-['DM_Mono'] uppercase tracking-wider">Instagram</span>
+                                    </div>
+                                    <p class="font-['DM_Sans'] text-white/80 text-sm max-w-xl leading-relaxed">
+                                        Creating visual breakdowns on modern AI tools, full-stack architectures, coding workflows, and software engineering insights for a growing tech community.
+                                    </p>
+                                    <div class="flex flex-wrap items-center gap-3 pt-1 text-[11px] font-['DM_Mono'] text-white/60">
+                                        <span class="flex items-center gap-1 text-[#F4EFE6]"><strong class="text-white">10K+</strong> Tech Followers</span>
+                                        <span>•</span>
+                                        <span class="text-[#E1306C] font-semibold">Daily Tech Insights</span>
+                                        <span>•</span>
+                                        <span>Practical Coding Reels</span>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
+
+                            <!-- Big Direct CTA Button -->
+                            <div class="relative z-10 shrink-0 w-full sm:w-auto">
+                                <a href="https://www.instagram.com/aajay.ai/" target="_blank" rel="noopener noreferrer"
+                                   class="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white font-['Open_Sauce_One'] text-xs sm:text-sm font-black uppercase tracking-wider shadow-[4px_4px_0_#000] hover:shadow-[6px_6px_0_#000] hover:scale-[1.02] active:translate-x-0.5 active:translate-y-0.5 transition-all flex items-center justify-center gap-2.5">
+                                    <span>FOLLOW @AAJAY.AI ON INSTAGRAM</span>
+                                    <span class="text-base font-bold">↗</span>
+                                </a>
+                            </div>
+                        </div>
                         </div>
 
                         <!-- 4 Category Modules Grid -->
