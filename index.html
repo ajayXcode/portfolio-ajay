@@ -3420,40 +3420,39 @@
                     <div id="hero-lighting" class="absolute inset-0 w-full h-full pointer-events-none opacity-0 mix-blend-multiply z-10 will-change-[background]" style="background: radial-gradient(circle 1100px at 50% 50%, rgba(244, 239, 230, 0) 0%, rgba(5, 16, 36, 0.65) 100%);"></div>
                     
                     <!-- Hero Centerpiece: Pop-Art Avatar Sticker + Name + Tagline -->
-                <div id="hero-text-wrapper" class="hero-overlay-text absolute inset-0 flex flex-col justify-center items-center z-20 pointer-events-none opacity-0 px-4 -translate-y-8 md:-translate-y-12">
-                    <div class="relative flex flex-col items-center justify-center text-center pointer-events-auto">
-                        
-                        <!-- Die-Cut Pop-Art Vinyl Sticker -->
-                        <div class="relative w-28 h-24 sm:w-36 sm:h-32 md:w-44 md:h-38 mb-3 sm:mb-4 select-none filter drop-shadow-[0_12px_28px_rgba(1,44,235,0.45)] hover:scale-105 hover:-rotate-2 transition-transform duration-300 group cursor-pointer">
-                            <img src="./ajay_sticker.png" alt="Ajay Yadav" class="w-full h-full object-contain pointer-events-auto" />
-                            <!-- Verified Creator Pill on Sticker -->
-                            <div class="absolute -bottom-2 right-1/2 translate-x-1/2 bg-[#012CEB] border-2 border-white text-white px-2.5 py-0.5 font-['DM_Mono'] text-[9px] sm:text-[10px] font-bold uppercase tracking-wider shadow-[3px_3px_0_#000] whitespace-nowrap">
-                                @aajay.ai • BUILDER
-                            </div>
-                        </div>
-
-                        <!-- Refined Headline, Name & High-Impact Identity -->
-                        <div class="flex flex-col items-center max-w-2xl px-2">
-                            <!-- Focus & Credentials Pill -->
-                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#012CEB]/15 border border-[#012CEB]/40 rounded-full mb-3 backdrop-blur-sm shadow-[0_2px_10px_rgba(1,44,235,0.2)]">
-                                <span class="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
-                                <span class="font-['DM_Mono'] text-[10px] sm:text-xs font-bold text-white/90 uppercase tracking-[0.2em]">
-                                    AI Systems Engineer • 4x Hackathon Finalist
-                                </span>
-                            </div>
-                            
-                            <!-- Elegant, Clean Name Heading (No clunky 3D block extrusion) -->
-                            <h1 id="hero-text-3d" class="font-['Inter'] font-extrabold text-4xl sm:text-6xl md:text-7xl text-white tracking-tight leading-tight select-none">
-                                Hey, I'm <span class="relative inline-block text-white">Ajay Yadav<span class="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-[3px] sm:h-[4px] bg-[#012CEB] rounded-full shadow-[0_0_12px_#012CEB]"></span></span>
-                            </h1>
-                            
-                            <!-- Meaningful Punchline connecting with midnight theme -->
-                            <p class="font-['Schoolbell'] text-lg sm:text-2xl md:text-3xl text-[#ECE8E1] tracking-wide mt-3 sm:mt-4 leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-                                Building autonomous AI systems by day, shipping code &amp; content by midnight.
-                            </p>
-                        </div>
-
+                <!-- Hero Centerpiece: Baaz-Style Giant Dr_Sugiyama Name + Big Blended Cutout -->
+                <div id="hero-text-wrapper" class="hero-overlay-text absolute inset-0 flex flex-col justify-end items-center z-20 pointer-events-none opacity-0 pb-24 sm:pb-28 md:pb-32 overflow-hidden">
+                    
+                    <!-- Giant Name: Dr_Sugiyama font at Baaz scale (behind portrait) -->
+                    <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none select-none">
+                        <h1 id="hero-text-3d" class="font-['Dr_Sugiyama'] text-[#F4EFE6] leading-none pointer-events-auto cursor-hover opacity-100 will-change-transform select-none" 
+                            style="font-size: clamp(160px, min(28vw, 50vh), 480px); letter-spacing: -0.02em; transform: rotate(-4deg) translateY(-50px); text-shadow: 0 0 50px rgba(1,44,235,0.4), 0 0 100px rgba(1,44,235,0.2);">
+                            ajay
+                        </h1>
                     </div>
+
+                    <!-- Big Blended Cutout (fades smoothly into dark bottom) -->
+                    <div class="relative z-20 w-[300px] sm:w-[420px] md:w-[490px] max-w-[90vw] h-[46vh] sm:h-[54vh] md:h-[58vh] flex items-end justify-center pointer-events-none select-none">
+                        <img src="./ajay_sticker.png" alt="Ajay Yadav" 
+                             class="w-full h-full object-contain object-bottom filter drop-shadow-[0_0_35px_rgba(1,44,235,0.35)] pointer-events-auto cursor-hover"
+                             style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 96%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 96%);" />
+                        
+                        <!-- Verified Creator & Identity Badge pinned near bottom of cutout -->
+                        <div class="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 pointer-events-auto z-30 whitespace-nowrap">
+                            <div class="flex items-center gap-2 bg-[#012CEB] border-2 border-white px-3 py-1 shadow-[4px_4px_0_#000] hover:scale-105 transition-transform cursor-pointer">
+                                <span class="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
+                                <span class="font-['DM_Mono'] text-[10px] sm:text-xs font-bold text-white uppercase tracking-wider">@aajay.ai • AI SYSTEMS BUILDER</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Authentic Tagline below cutout -->
+                    <div class="relative z-30 mt-2 text-center pointer-events-auto px-4 max-w-xl">
+                        <p class="font-['Schoolbell'] text-base sm:text-xl md:text-2xl text-[#ECE8E1] tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                            Architecting Intelligent Systems &amp; Building in Public.
+                        </p>
+                    </div>
+
                 </div>
                     <!-- Sound Toggle -->
                     <button id="sound-toggle" data-no-cursor-change class="absolute bottom-6 right-6 md:bottom-12 md:right-12 z-50 w-12 h-12 md:w-16 md:h-16 rounded-full border-[2px] border-[var(--navy)] bg-[var(--beige)] text-[var(--navy)] flex items-center justify-center hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F35FF] shadow-[4px_4px_0_rgba(5,16,36,0.9)] cursor-hover pointer-events-auto">
@@ -3567,7 +3566,7 @@
                          and sit only ~9-20px apart at 1366x768/1440x900 — fragile even where it doesn't
                          already overlap. This adds real, permanent clearance across all three instead of
                          relying on that coincidental (and, at 1920x1080, insufficient) gap. -->
-                    <div class="hero-overlay-text absolute bottom-16 md:bottom-48 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center opacity-0 z-[9999] pointer-events-none">
+                    <div class="hero-overlay-text absolute bottom-10 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center opacity-0 z-[9999] pointer-events-none">
                         <div aria-hidden="true" class="bg-[var(--navy)] border-[2px] border-[var(--beige)] text-[var(--beige)] px-4 py-2 font-['Schoolbell'] font-bold uppercase tracking-[0.2em] text-[10px] md:text-[12px] shadow-[4px_4px_0_var(--blue)] transform -rotate-1 mb-3">
                             GO ON, SCROLL DOWN
                         </div>
@@ -5817,7 +5816,7 @@
                 
                 // Elegant ambient glow instead of heavy 40-layer 3D block extrusion
                 const shBlur = isMagneticLock ? 35 : 22;
-                heroText3d.style.textShadow = `${shX * 0.15}px ${shY * 0.15}px ${shBlur}px rgba(1, 44, 235, 0.4), 0 4px 12px rgba(0, 0, 0, 0.7)`;
+                heroText3d.style.textShadow = `${shX * 0.2}px ${shY * 0.2}px ${shBlur}px rgba(1, 44, 235, 0.45), 0 0 80px rgba(1, 44, 235, 0.25)`;
             }
 
             if (heroLighting) {
